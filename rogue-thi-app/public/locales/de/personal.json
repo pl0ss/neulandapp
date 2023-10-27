@@ -31,6 +31,10 @@
                 "title":"Sprache für den Speiseplan",
                 "default":"Standard"
             },
+            "languageFood":{
+                "title":"Sprache für den Speiseplan",
+                "default":"Standard"
+            },
             "personalData": {
                 "matriculationNumber": "Matrikelnummer",
                 "libraryNumber": "Bibliotheksnummer",

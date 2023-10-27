@@ -72,14 +72,6 @@ export default function LanguageModal () {
             {t('personal.modals.languageFood.title')}
           </h5>
         </div>
-        {/*
-        <Form.Check
-          id='languageFood-default'
-          label={t('personal.modals.languageFood.default')}
-          checked={selectedLanguageFood === 'default'}
-          onChange={() => toggleSelectedLanguageFood('default')}
-          type={'radio'}
-        /> */}
 
         <Button
           id='languageFood-default'
@@ -91,15 +83,6 @@ export default function LanguageModal () {
         </Button>
 
         {languages.map((language, i) => (
-          // <Form.Check
-          //   key={i}
-          //   id={`languageFood-${language.key}`}
-          //   label={language.name[i18n.languages[0]]}
-          //   checked={selectedLanguageFood === language.key}
-          //   onChange={() => toggleSelectedLanguageFood(language.key)}
-          //   type={'radio'}
-          // />
-
           <Button
             key={i}
             id={`languageFood-${language.key}`}

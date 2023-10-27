@@ -31,6 +31,10 @@
                 "title":"Language for food menu",
                 "default":"Default"
             },
+            "languageFood":{
+                "title":"Language for food menu",
+                "default":"Default"
+            },
             "personalData": {
                 "matriculationNumber": "Matriculation Number",
                 "libraryNumber": "Library Number",
