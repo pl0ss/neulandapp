@@ -181,7 +181,7 @@ export default function Timetable () {
     loadRoomAvailability()
   }
 
-  async function loadRoomAvailability () { //* Ähnliche fun. siehe "RoomMap.jsx"
+  async function loadRoomAvailability () {
     const roomAvailabilityData = await getRoomAvailability()
 
     const roomAvailabilityList = Object.fromEntries(Object.entries(roomAvailabilityData).map(([room, openings]) => {
@@ -196,7 +196,7 @@ export default function Timetable () {
     setRoomAvailabilityList(roomAvailabilityList)
   }
 
-  function roomAvailabilityText (room) { //! fun. umbennen?
+  function roomAvailabilityText (room) {
     const dateFrom = roomAvailabilityList?.[room]?.[0]?.['from']
     const dateUntil = roomAvailabilityList?.[room]?.[0]?.['until']
     if (dateFrom && dateUntil) {
@@ -241,7 +241,6 @@ export default function Timetable () {
                       {getTimetableEntryName(item).name}
                     </div>
                     <div className={styles.room}>
-                      {/* #377 */}
                       {item.rooms.map((room, i, array) => (
                         <>
                           {/^[A-Z](G|[0-9E]\.)?\d*$/.test(room)
