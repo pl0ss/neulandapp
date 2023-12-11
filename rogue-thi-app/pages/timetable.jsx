@@ -192,7 +192,6 @@ export default function Timetable () {
       return [room, availability]
     }))
 
-    console.log(roomAvailabilityList)
     setRoomAvailabilityList(roomAvailabilityList)
   }
 
@@ -200,7 +199,7 @@ export default function Timetable () {
     const dateFrom = roomAvailabilityList?.[room]?.[0]?.['from']
     const dateUntil = roomAvailabilityList?.[room]?.[0]?.['until']
     if (dateFrom && dateUntil) {
-      if (dateFrom < new Date()) {
+      if (dateFrom > new Date()) {
         const date = new Date(dateFrom)
         return ` ${t('timetable.availableFrom')} ${formatFriendlyTime(date)}`
       } else {
