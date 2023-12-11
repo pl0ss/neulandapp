@@ -202,10 +202,10 @@ export default function Timetable () {
     if (dateFrom && dateUntil) {
       if (dateFrom < new Date()) {
         const date = new Date(dateFrom)
-        return ` ${t('timetable.availableFrom')} ${date.getHours()}:${String(date.getMinutes()).padStart(2, '0')}`
+        return ` ${t('timetable.availableFrom')} ${formatFriendlyTime(date)}`
       } else {
         const date = new Date(dateUntil)
-        return ` ${t('timetable.availableUntil')} ${date.getHours()}:${String(date.getMinutes()).padStart(2, '0')}`
+        return ` ${t('timetable.availableUntil')} ${formatFriendlyTime(date)}`
       }
     } else {
       return ''
@@ -252,7 +252,7 @@ export default function Timetable () {
                             : (
                               <span key={i}>{room}</span>
                             )}
-                          {roomAvailabilityText(room)}
+                          {isToday(group.date) && roomAvailabilityText(room)}
                           {i < array.length - 1 && ' '}
                         </>
                       ))}
